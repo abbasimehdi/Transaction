@@ -1,16 +1,15 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Selfofficename\Modules\Domain\Card\Models\Schemas\AddCardSchema;
+use Selfofficename\Modules\Domain\Commission\Models\Schemas\AddCommissionSchema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        AddCardSchema::createTable();
+        AddCommissionSchema::createTable();
     }
 
     /**
@@ -18,6 +17,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        AddCardSchema::dropTable();
+        AddCommissionSchema::dropTable();
     }
 };

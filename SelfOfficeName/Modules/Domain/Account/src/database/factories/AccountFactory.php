@@ -17,6 +17,7 @@ class AccountFactory extends Factory
      */
     public function definition(): array
     {
+        dd(1312);
         return [
             'user_id' => User::query()->inRandomOrder()->first()->id,
             'number' => fake()->unique()->numberBetween(10),
