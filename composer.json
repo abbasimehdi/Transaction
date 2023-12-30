@@ -27,9 +27,10 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
             "Selfofficename\\Modules\\Core\\": "SelfOfficeName/Modules/Core/src",
+            "Selfofficename\\Modules\\InfraStructure\\": "SelfOfficeName/Modules/infrastructure/src",
             "Selfofficename\\Modules\\Domain\\Account\\": "SelfOfficeName/Modules/Domain/Account/src",
             "Selfofficename\\Modules\\Domain\\Card\\": "SelfOfficeName/Modules/Domain/Card/src",
-            "Selfofficename\\Modules\\InfraStructure\\": "SelfOfficeName/Modules/infrastructure/src"
+            "Selfofficename\\Modules\\Domain\\Transaction\\": "SelfOfficeName/Modules/Domain/Card/src"
         }
     },
     "autoload-dev": {
