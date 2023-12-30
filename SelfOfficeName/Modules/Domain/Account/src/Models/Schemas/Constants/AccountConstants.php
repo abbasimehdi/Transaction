@@ -1,6 +1,6 @@
 <?php
 
-namespace Selfofficename\Modules\Domain\Product\Models\Schemas\Constants;
+namespace Selfofficename\Modules\Domain\Account\Models\Schemas\Constants;
 class AccountConstants
 {
     const API_ROUTE = '/routes/api.php';

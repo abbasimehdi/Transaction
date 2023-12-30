@@ -4,8 +4,7 @@ namespace Selfofficename\Modules\Domain\Account;
 
 use Carbon\Laravel\ServiceProvider;
 use Illuminate\Support\Facades\Route;
-use Selfofficename\Modules\Domain\Product\Console\Commands\FireCommand;
-use Selfofficename\Modules\Domain\Product\Models\Schemas\Constants\CsrdConstants;
+use Selfofficename\Modules\Domain\Account\Models\Schemas\Constants\AccountConstants;
 
 class AccountServiceProvider extends ServiceProvider
 {
@@ -15,7 +14,7 @@ class AccountServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->routeRegister();
-        $this->loadMigrationsFrom(__DIR__.CsrdConstants::MIGRATION_ROUTE);
+        $this->loadMigrationsFrom(__DIR__.AccountConstants::MIGRATION_ROUTE);
     }
 
     /**
@@ -23,8 +22,8 @@ class AccountServiceProvider extends ServiceProvider
      */
     private function routeRegister(): void
     {
-        Route::prefix(CsrdConstants::PREFIX)
-            ->namespace(CsrdConstants::CONTROLLER_ROUTE)
-            ->group(__DIR__.CsrdConstants::API_ROUTE);
+        Route::prefix(AccountConstants::PREFIX)
+            ->namespace(AccountConstants::CONTROLLER_ROUTE)
+            ->group(__DIR__.AccountConstants::API_ROUTE);
     }
 }
