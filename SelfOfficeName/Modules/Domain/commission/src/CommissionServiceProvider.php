@@ -4,7 +4,7 @@ namespace Selfofficename\Modules\Domain\Commission;
 
 use Carbon\Laravel\ServiceProvider;
 use Illuminate\Support\Facades\Route;
-use Selfofficename\Modules\Domain\Card\Models\Schemas\Constants\CsrdConstants;
+use Selfofficename\Modules\Domain\Card\Models\Schemas\Constants\CardConstants;
 use Selfofficename\Modules\Domain\Card\Models\Schemas\Constants\TransactionConstants;
 
 class CommissionServiceProvider extends ServiceProvider

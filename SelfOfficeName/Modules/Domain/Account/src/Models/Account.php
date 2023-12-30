@@ -4,8 +4,25 @@ namespace Selfofficename\Modules\Domain\Account\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Selfofficename\Modules\Domain\Account\database\factories\AccountFactory;
+use Selfofficename\Modules\InfraStructure\Models\User;
 
 class Account extends Model
 {
     use HasFactory;
+    use SoftDeletes;
+
+    protected $fillable = ['user_id', 'number'];
+
+    protected static function newFactory(): Factory
+    {
+        return AccountFactory::new();
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
