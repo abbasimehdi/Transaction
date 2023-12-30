@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+use Selfofficename\Modules\Domain\Account\AccountServiceProvider;
+use Selfofficename\Modules\Domain\Card\CardServiceProvider;
+use Selfofficename\Modules\Domain\Card\TransactionServiceProvider;
 
 return [
 
@@ -163,6 +166,9 @@ return [
         // Product
         \Selfofficename\Modules\Core\CoreServiceProvider::class,
 
+        AccountServiceProvider::class,
+        CardServiceProvider::class,
+        TransactionServiceProvider::class,
 
         /*
          * Package Service Providers...
