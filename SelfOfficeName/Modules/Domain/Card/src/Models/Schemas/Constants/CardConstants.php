@@ -1,7 +1,7 @@
 <?php
 
 namespace Selfofficename\Modules\Domain\Card\Models\Schemas\Constants;
-class CsrdConstants
+class CardConstants
 {
     const API_ROUTE = '/routes/api.php';
     const PREFIX = 'api/v1/account';
