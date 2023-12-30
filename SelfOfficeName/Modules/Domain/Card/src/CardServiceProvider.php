@@ -1,13 +1,12 @@
 <?php
 
-namespace Selfofficename\Modules\Domain\Account;
+namespace Selfofficename\Modules\Domain\Card;
 
 use Carbon\Laravel\ServiceProvider;
 use Illuminate\Support\Facades\Route;
-use Selfofficename\Modules\Domain\Product\Console\Commands\FireCommand;
-use Selfofficename\Modules\Domain\Product\Models\Schemas\Constants\CsrdConstants;
+use Selfofficename\Modules\Domain\Card\Models\Schemas\Constants\CsrdConstants;
 
-class AccountServiceProvider extends ServiceProvider
+class CardServiceProvider extends ServiceProvider
 {
     /**
      * @return void
@@ -23,7 +22,7 @@ class AccountServiceProvider extends ServiceProvider
      */
     private function routeRegister(): void
     {
-        Route::prefix(CsrdConstants::PREFIX)
+        Route::prefix(\Selfofficename\Modules\Domain\Card\Models\Schemas\Constants\CsrdConstants::PREFIX)
             ->namespace(CsrdConstants::CONTROLLER_ROUTE)
             ->group(__DIR__.CsrdConstants::API_ROUTE);
     }

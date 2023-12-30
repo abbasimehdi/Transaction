@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome')->with(['products' => \Selfofficename\Modules\Domain\Product\Models\Product::paginate(5)]);
+    return view('welcome');
 });
