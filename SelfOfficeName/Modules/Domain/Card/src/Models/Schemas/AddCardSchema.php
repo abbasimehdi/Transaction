@@ -1,18 +1,18 @@
 <?php
 
-namespace Selfofficename\Modules\Domain\Account\Models\Schemas;
+namespace Selfofficename\Modules\Domain\Product\Models\Schemas;
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddAccountSchema
+class AddCardSchema
 {
     /**
      * @return void
      */
     public static function createTable(): void
     {
-        Schema::create('accounts', function (Blueprint $table) {
+        Schema::create('cards', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -23,6 +23,6 @@ class AddAccountSchema
      */
     public static function dropTable(): void
     {
-        Schema::dropIfExists('accounts');
+        Schema::dropIfExists('cards');
     }
 }
