@@ -5,18 +5,15 @@ namespace Selfofficename\Modules\Domain\Product\Models\Schemas;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddProductSchema
+class AddAccountSchema
 {
     /**
      * @return void
      */
     public static function createTable(): void
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('accounts', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('image');
-            $table->unsignedInteger('likes')->default(0);
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ class AddProductSchema
      */
     public static function dropTable(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('accounts');
     }
 }

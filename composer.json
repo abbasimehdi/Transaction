@@ -27,14 +27,14 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
             "Selfofficename\\Modules\\Core\\": "SelfOfficeName/Modules/Core/src",
-            "Selfofficename\\Modules\\Domain\\Product\\": "SelfOfficeName/Modules/Domain/Product/src",
+            "Selfofficename\\Modules\\Domain\\Account\\": "SelfOfficeName/Modules/Domain/Account/src",
             "Selfofficename\\Modules\\InfraStructure\\": "SelfOfficeName/Modules/infrastructure/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
-            "Selfofficename\\Modules\\Product\\tests\\": "SelfOfficeName/Modules/Domain/Product/tests"
+            "Selfofficename\\Modules\\Product\\tests\\": "SelfOfficeName/Modules/Domain/Account/tests"
         }
     },
     "scripts": {

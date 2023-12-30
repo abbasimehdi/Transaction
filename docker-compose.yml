@@ -2,16 +2,16 @@ version: '3'
 services:
 
     #PHP Service
-    trabsaction_app:
+    transaction_app:
         build:
             context: .
             dockerfile: Dockerfile
         image: digitalocean.com/php
-        container_name: trabsaction_app
+        container_name: transaction_app
         restart: unless-stopped
         tty: true
         environment:
-            SERVICE_NAME: trabsaction_apptrabsaction_app
+            SERVICE_NAME: transaction_app
             SERVICE_TAGS: dev
         working_dir: /var/www
         volumes:
@@ -36,15 +36,15 @@ services:
             - app-network
 
     #MySQL Service
-    trabsaction_db:
+    transaction_db:
         image: mysql
-        container_name: trabsaction_db
+        container_name: transaction_db
         restart: unless-stopped
         tty: true
         ports:
             - "3306:3306"
         environment:
-            MYSQL_DATABASE: trabsaction_db
+            MYSQL_DATABASE: transaction_db
             MYSQL_ROOT_PASSWORD: 123456
             SERVICE_TAGS: dev
             SERVICE_NAME: mysql

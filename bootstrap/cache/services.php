@@ -32,11 +32,10 @@
     28 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
     29 => 'VladimirYuldashev\\LaravelQueueRabbitMQ\\LaravelQueueRabbitMQServiceProvider',
     30 => 'Selfofficename\\Modules\\Core\\CoreServiceProvider',
-    31 => 'Selfofficename\\Modules\\Domain\\Product\\ProductServiceProvider',
-    32 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AppServiceProvider',
-    33 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AuthServiceProvider',
-    34 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\EventServiceProvider',
-    35 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\RouteServiceProvider',
+    31 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AppServiceProvider',
+    32 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AuthServiceProvider',
+    33 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\EventServiceProvider',
+    34 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -57,11 +56,10 @@
     14 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
     15 => 'VladimirYuldashev\\LaravelQueueRabbitMQ\\LaravelQueueRabbitMQServiceProvider',
     16 => 'Selfofficename\\Modules\\Core\\CoreServiceProvider',
-    17 => 'Selfofficename\\Modules\\Domain\\Product\\ProductServiceProvider',
-    18 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AppServiceProvider',
-    19 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AuthServiceProvider',
-    20 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\EventServiceProvider',
-    21 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\RouteServiceProvider',
+    17 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AppServiceProvider',
+    18 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AuthServiceProvider',
+    19 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\EventServiceProvider',
+    20 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (

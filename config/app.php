@@ -162,7 +162,6 @@ return [
          */
         // Product
         \Selfofficename\Modules\Core\CoreServiceProvider::class,
-        \Selfofficename\Modules\Domain\Product\ProductServiceProvider::class,
 
 
         /*
