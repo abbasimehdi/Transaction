@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-use Selfofficename\Modules\Domain\Product\Models\Schemas\AddTransactionSchema;
+use Selfofficename\Modules\Domain\Transaction\Models\Schemas\AddTransactionSchema;
 
 return new class extends Migration
 {
