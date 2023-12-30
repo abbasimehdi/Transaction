@@ -2,10 +2,10 @@
 
 namespace Selfofficename\Modules\Domain\Account\Models;
 
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Selfofficename\Modules\Domain\Account\database\factories\AccountFactory;
 use Selfofficename\Modules\InfraStructure\Models\User;
 

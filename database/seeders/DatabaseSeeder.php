@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Selfofficename\Modules\Domain\Product\database\seeders\ProductSeeder;
+use Selfofficename\Modules\Domain\Account\database\seeders\AccountSeeder;
+use Selfofficename\Modules\Domain\Card\database\seeders\CardSeeder;
+use Selfofficename\Modules\Domain\Transaction\database\seeders\TransactionSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,7 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
          $this->call([
-             ProductSeeder::class,
+             AccountSeeder::class,
+             CardSeeder::class,
+             TransactionSeeder::class,
+             \CommissionSeeder::class,
              UserSeeder::class
          ]);
     }
