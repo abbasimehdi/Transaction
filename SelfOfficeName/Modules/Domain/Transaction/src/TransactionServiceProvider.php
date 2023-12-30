@@ -1,11 +1,10 @@
 <?php
 
-namespace Selfofficename\Modules\Domain\Card;
+namespace Selfofficename\Modules\Domain\Transaction;
 
 use Carbon\Laravel\ServiceProvider;
 use Illuminate\Support\Facades\Route;
-use Selfofficename\Modules\Domain\Card\Models\Schemas\Constants\CsrdConstants;
-use Selfofficename\Modules\Domain\Card\Models\Schemas\Constants\TransactionConstants;
+use Selfofficename\Modules\Domain\Transaction\Models\Schemas\Constants\TransactionConstants;
 
 class TransactionServiceProvider extends ServiceProvider
 {

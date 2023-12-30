@@ -22,7 +22,7 @@ class CardServiceProvider extends ServiceProvider
      */
     private function routeRegister(): void
     {
-        Route::prefix(\Selfofficename\Modules\Domain\Card\Models\Schemas\Constants\CsrdConstants::PREFIX)
+        Route::prefix(CsrdConstants::PREFIX)
             ->namespace(CsrdConstants::CONTROLLER_ROUTE)
             ->group(__DIR__.CsrdConstants::API_ROUTE);
     }

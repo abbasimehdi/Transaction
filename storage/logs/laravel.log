@@ -5743,3 +5743,165 @@ Did you mean one of these?
 #42 /var/www/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #43 {main}
 "} 
+[2023-12-30 12:05:47] local.ERROR: Class "Selfofficename\Modules\Domain\Card\TransactionServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Selfofficename\\Modules\\Domain\\Card\\TransactionServiceProvider\" not found at /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:206)
+[stacktrace]
+#0 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(142): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#1 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#2 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(763): Illuminate\\Foundation\\ProviderRepository->load()
+#3 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#5 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith()
+#6 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /home/mehdi/programming/Transaction/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2023-12-30 12:07:30] local.ERROR: Class "Selfofficename\Modules\Domain\Card\TransactionServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Selfofficename\\Modules\\Domain\\Card\\TransactionServiceProvider\" not found at /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:206)
+[stacktrace]
+#0 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(142): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#1 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#2 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(763): Illuminate\\Foundation\\ProviderRepository->load()
+#3 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#5 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith()
+#6 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /home/mehdi/programming/Transaction/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2023-12-30 12:08:23] local.ERROR: Class "Selfofficename\Modules\Domain\Transaction\TransactionServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Selfofficename\\Modules\\Domain\\Transaction\\TransactionServiceProvider\" not found at /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:206)
+[stacktrace]
+#0 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(142): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#1 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#2 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(763): Illuminate\\Foundation\\ProviderRepository->load()
+#3 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#5 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith()
+#6 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /home/mehdi/programming/Transaction/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2023-12-30 12:09:57] local.ERROR: Class "Selfofficename\Modules\Domain\Transaction\TransactionServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Selfofficename\\Modules\\Domain\\Transaction\\TransactionServiceProvider\" not found at /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:206)
+[stacktrace]
+#0 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(142): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#1 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#2 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(763): Illuminate\\Foundation\\ProviderRepository->load()
+#3 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#5 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith()
+#6 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /home/mehdi/programming/Transaction/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2023-12-30 12:10:54] local.ERROR: Class "Selfofficename\Modules\Domain\Product\Models\Schemas\Constants\CsrdConstants" not found {"exception":"[object] (Error(code: 0): Class \"Selfofficename\\Modules\\Domain\\Product\\Models\\Schemas\\Constants\\CsrdConstants\" not found at /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php:26)
+[stacktrace]
+#0 /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php(17): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->routeRegister()
+#1 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->boot()
+#2 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->call()
+#7 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1009): Illuminate\\Foundation\\Application->bootProvider()
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}()
+#9 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1010): array_walk()
+#10 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap()
+#12 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith()
+#13 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /home/mehdi/programming/Transaction/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#15 {main}
+"} 
+[2023-12-30 12:11:14] local.ERROR: Class "Selfofficename\Modules\Domain\Product\Models\Schemas\Constants\CsrdConstants" not found {"exception":"[object] (Error(code: 0): Class \"Selfofficename\\Modules\\Domain\\Product\\Models\\Schemas\\Constants\\CsrdConstants\" not found at /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php:26)
+[stacktrace]
+#0 /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php(17): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->routeRegister()
+#1 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->boot()
+#2 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->call()
+#7 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1009): Illuminate\\Foundation\\Application->bootProvider()
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}()
+#9 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1010): array_walk()
+#10 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap()
+#12 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith()
+#13 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /home/mehdi/programming/Transaction/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#15 {main}
+"} 
+[2023-12-30 12:15:08] local.ERROR: Class "Selfofficename\Modules\Domain\Product\Models\Schemas\Constants\CsrdConstants" not found {"exception":"[object] (Error(code: 0): Class \"Selfofficename\\Modules\\Domain\\Product\\Models\\Schemas\\Constants\\CsrdConstants\" not found at /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php:26)
+[stacktrace]
+#0 /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php(17): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->routeRegister()
+#1 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->boot()
+#2 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->call()
+#7 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1009): Illuminate\\Foundation\\Application->bootProvider()
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}()
+#9 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1010): array_walk()
+#10 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap()
+#12 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith()
+#13 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /home/mehdi/programming/Transaction/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#15 {main}
+"} 
+[2023-12-30 12:15:14] local.ERROR: Class "Selfofficename\Modules\Domain\Product\Models\Schemas\Constants\CsrdConstants" not found {"exception":"[object] (Error(code: 0): Class \"Selfofficename\\Modules\\Domain\\Product\\Models\\Schemas\\Constants\\CsrdConstants\" not found at /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php:26)
+[stacktrace]
+#0 /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php(17): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->routeRegister()
+#1 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->boot()
+#2 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->call()
+#7 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1009): Illuminate\\Foundation\\Application->bootProvider()
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}()
+#9 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1010): array_walk()
+#10 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap()
+#12 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith()
+#13 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /home/mehdi/programming/Transaction/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#15 {main}
+"} 
+[2023-12-30 12:16:36] local.ERROR: Class "Selfofficename\Modules\Domain\Product\Models\Schemas\Constants\AccountConstants" not found {"exception":"[object] (Error(code: 0): Class \"Selfofficename\\Modules\\Domain\\Product\\Models\\Schemas\\Constants\\AccountConstants\" not found at /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php:27)
+[stacktrace]
+#0 /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php(18): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->routeRegister()
+#1 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->boot()
+#2 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->call()
+#7 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1009): Illuminate\\Foundation\\Application->bootProvider()
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}()
+#9 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1010): array_walk()
+#10 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap()
+#12 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith()
+#13 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /home/mehdi/programming/Transaction/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#15 {main}
+"} 
+[2023-12-30 12:16:57] local.ERROR: Class "Selfofficename\Modules\Domain\Product\Models\Schemas\Constants\AccountConstants" not found {"exception":"[object] (Error(code: 0): Class \"Selfofficename\\Modules\\Domain\\Product\\Models\\Schemas\\Constants\\AccountConstants\" not found at /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php:27)
+[stacktrace]
+#0 /home/mehdi/programming/Transaction/SelfOfficeName/Modules/Domain/Account/src/AccountServiceProvider.php(18): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->routeRegister()
+#1 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider->boot()
+#2 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->call()
+#7 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1009): Illuminate\\Foundation\\Application->bootProvider()
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}()
+#9 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1010): array_walk()
+#10 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap()
+#12 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith()
+#13 /home/mehdi/programming/Transaction/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /home/mehdi/programming/Transaction/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#15 {main}
+"} 

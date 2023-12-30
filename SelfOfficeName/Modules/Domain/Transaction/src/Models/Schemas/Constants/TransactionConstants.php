@@ -1,6 +1,6 @@
 <?php
 
-namespace Selfofficename\Modules\Domain\Card\Models\Schemas\Constants;
+namespace Selfofficename\Modules\Domain\Transaction\Models\Schemas\Constants;
 class TransactionConstants
 {
     const API_ROUTE = '/routes/api.php';
