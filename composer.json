@@ -8,6 +8,7 @@
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
+        "laravel/passport": "^11.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "vladimir-yuldashev/laravel-queue-rabbitmq": "^13.3"
@@ -28,6 +29,7 @@
             "Database\\Seeders\\": "database/seeders/",
             "Selfofficename\\Modules\\Core\\": "SelfOfficeName/Modules/Core/src",
             "Selfofficename\\Modules\\InfraStructure\\": "SelfOfficeName/Modules/infrastructure/src",
+            "Selfofficename\\Modules\\Domain\\Authentication\\": "SelfOfficeName/Modules/Domain/Authentication/src",
             "Selfofficename\\Modules\\Domain\\Account\\": "SelfOfficeName/Modules/Domain/Account/src",
             "Selfofficename\\Modules\\Domain\\Card\\": "SelfOfficeName/Modules/Domain/Card/src",
             "Selfofficename\\Modules\\Domain\\Transaction\\": "SelfOfficeName/Modules/Domain/Transaction/src",
