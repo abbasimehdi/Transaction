@@ -1,8 +1,9 @@
 <?php
 
+namespace Selfofficename\Modules\Domain\Commission\database\seeders;
 
 use Illuminate\Database\Seeder;
-use SelfOfficeName\Modules\Domain\commission\src\Models\Commission;
+use Selfofficename\Modules\Domain\Commission\Models\Commission;
 
 class CommissionSeeder extends Seeder
 {

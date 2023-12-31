@@ -3,13 +3,15 @@
 namespace Selfofficename\Modules\Domain\Account\database\factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Selfofficename\Modules\Domain\Account\Models\Account;
 use Selfofficename\Modules\InfraStructure\Models\User;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Selfofficename\Modules\Domain\Account\Models\Account>
+ * @extends Factory<\Selfofficename\Modules\Domain\Account\Models\Account>
  */
 class AccountFactory extends Factory
 {
+    protected $model = Account::class;
     /**
      * Define the model's default state.
      *
@@ -17,7 +19,6 @@ class AccountFactory extends Factory
      */
     public function definition(): array
     {
-        dd(1312);
         return [
             'user_id' => User::query()->inRandomOrder()->first()->id,
             'number' => fake()->unique()->numberBetween(10),

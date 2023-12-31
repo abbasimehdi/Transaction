@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Selfofficename\Modules\Domain\Account\database\seeders\AccountSeeder;
 use Selfofficename\Modules\Domain\Card\database\seeders\CardSeeder;
 use Selfofficename\Modules\Domain\Transaction\database\seeders\TransactionSeeder;
+use Selfofficename\Modules\Domain\Commission\database\seeders\CommissionSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,7 +20,7 @@ class DatabaseSeeder extends Seeder
              AccountSeeder::class,
              CardSeeder::class,
              TransactionSeeder::class,
-             \CommissionSeeder::class,
+             CommissionSeeder::class,
          ]);
     }
 }

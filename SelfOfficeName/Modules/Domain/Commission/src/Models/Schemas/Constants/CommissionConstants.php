@@ -1,7 +1,7 @@
 <?php
 
 namespace Selfofficename\Modules\Domain\Commission\Models\Schemas\Constants;
-class TransactionConstants
+class CommissionConstants
 {
     const API_ROUTE = '/routes/api.php';
     const PREFIX = 'api/v1/commission';

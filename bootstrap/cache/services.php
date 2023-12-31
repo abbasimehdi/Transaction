@@ -35,10 +35,11 @@
     31 => 'Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider',
     32 => 'Selfofficename\\Modules\\Domain\\Card\\CardServiceProvider',
     33 => 'Selfofficename\\Modules\\Domain\\Transaction\\TransactionServiceProvider',
-    34 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AppServiceProvider',
-    35 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AuthServiceProvider',
-    36 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\EventServiceProvider',
-    37 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\RouteServiceProvider',
+    34 => 'Selfofficename\\Modules\\Domain\\Commission\\CommissionServiceProvider',
+    35 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AppServiceProvider',
+    36 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AuthServiceProvider',
+    37 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\EventServiceProvider',
+    38 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -62,10 +63,11 @@
     17 => 'Selfofficename\\Modules\\Domain\\Account\\AccountServiceProvider',
     18 => 'Selfofficename\\Modules\\Domain\\Card\\CardServiceProvider',
     19 => 'Selfofficename\\Modules\\Domain\\Transaction\\TransactionServiceProvider',
-    20 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AppServiceProvider',
-    21 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AuthServiceProvider',
-    22 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\EventServiceProvider',
-    23 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\RouteServiceProvider',
+    20 => 'Selfofficename\\Modules\\Domain\\Commission\\CommissionServiceProvider',
+    21 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AppServiceProvider',
+    22 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\AuthServiceProvider',
+    23 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\EventServiceProvider',
+    24 => 'Selfofficename\\Modules\\InfraStructure\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (

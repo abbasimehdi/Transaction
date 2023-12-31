@@ -6,6 +6,7 @@ use Carbon\Laravel\ServiceProvider;
 use Illuminate\Support\Facades\Route;
 use Selfofficename\Modules\Domain\Card\Models\Schemas\Constants\CardConstants;
 use Selfofficename\Modules\Domain\Card\Models\Schemas\Constants\TransactionConstants;
+use Selfofficename\Modules\Domain\Commission\Models\Schemas\Constants\CommissionConstants;
 
 class CommissionServiceProvider extends ServiceProvider
 {
@@ -15,7 +16,7 @@ class CommissionServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->routeRegister();
-        $this->loadMigrationsFrom(__DIR__.CommissionCo::MIGRATION_ROUTE);
+        $this->loadMigrationsFrom(__DIR__.CommissionConstants::MIGRATION_ROUTE);
     }
 
     /**
@@ -23,8 +24,8 @@ class CommissionServiceProvider extends ServiceProvider
      */
     private function routeRegister(): void
     {
-        Route::prefix(CommissionC::PREFIX)
-            ->namespace(CommissionC::CONTROLLER_ROUTE)
-            ->group(__DIR__.CommissionC::API_ROUTE);
+        Route::prefix(CommissionConstants::PREFIX)
+            ->namespace(CommissionConstants::CONTROLLER_ROUTE)
+            ->group(__DIR__.CommissionConstants::API_ROUTE);
     }
 }
