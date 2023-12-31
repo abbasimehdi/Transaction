@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 use Selfofficename\Modules\Domain\Account\AccountServiceProvider;
+use Selfofficename\Modules\Domain\Authentication\AuthenticationServiceProvider;
 use Selfofficename\Modules\Domain\Card\CardServiceProvider;
 use Selfofficename\Modules\Domain\Commission\CommissionServiceProvider;
 use Selfofficename\Modules\Domain\Transaction\TransactionServiceProvider;
@@ -167,6 +168,7 @@ return [
         // Product
         \Selfofficename\Modules\Core\CoreServiceProvider::class,
 
+        AuthenticationServiceProvider::class,
         AccountServiceProvider::class,
         CardServiceProvider::class,
         TransactionServiceProvider::class,
