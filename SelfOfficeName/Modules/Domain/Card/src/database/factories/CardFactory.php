@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Selfofficename\Modules\Domain\Account\Models\Account;
+use Selfofficename\Modules\Domain\Card\Models\Card;
 use Selfofficename\Modules\InfraStructure\Models\User;
 
 /**
@@ -13,6 +14,7 @@ use Selfofficename\Modules\InfraStructure\Models\User;
  */
 class CardFactory extends Factory
 {
+    protected $model = Card::class;
     /**
      * Define the model's default state.
      *

@@ -4,6 +4,7 @@ namespace Selfofficename\Modules\Domain\Transaction\Models\Schemas;
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Selfofficename\Modules\Domain\Transaction\Enums\StatusEnum;
 
 class AddTransactionSchema
 {

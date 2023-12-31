@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Selfofficename\Modules\Domain\Account\database\factories\AccountFactory;
 use Selfofficename\Modules\InfraStructure\Models\User;
 
+
 class Account extends Model
 {
     use HasFactory;

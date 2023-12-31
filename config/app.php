@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 use Selfofficename\Modules\Domain\Account\AccountServiceProvider;
 use Selfofficename\Modules\Domain\Card\CardServiceProvider;
+use Selfofficename\Modules\Domain\Commission\CommissionServiceProvider;
 use Selfofficename\Modules\Domain\Transaction\TransactionServiceProvider;
 
 return [
@@ -169,6 +170,7 @@ return [
         AccountServiceProvider::class,
         CardServiceProvider::class,
         TransactionServiceProvider::class,
+        CommissionServiceProvider::class,
 
         /*
          * Package Service Providers...
