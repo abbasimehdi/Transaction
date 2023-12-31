@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Selfofficename\Modules\Domain\Account\database\factories\AccountFactory;
+use Selfofficename\Modules\Domain\Card\Models\Card;
 use Selfofficename\Modules\InfraStructure\Models\User;
 
 
@@ -24,6 +25,12 @@ class Account extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'id', 'user_id');
     }
+
+    public function cards()
+    {
+        return $this->hasMany(Card::class,  'account_id', 'id');
+    }
+
 }

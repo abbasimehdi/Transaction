@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Selfofficename\Modules\Domain\Account\Models\Account;
 use Selfofficename\Modules\Domain\Card\database\factories\CardFactory;
+use Selfofficename\Modules\Domain\Transaction\Models\Transaction;
 
 class Card extends Model
 {
@@ -20,13 +21,14 @@ class Card extends Model
     {
         return CardFactory::new();
     }
+
     public function account()
     {
-        return $this->belongsTo(Account::class);
+        return $this->belongsTo(Account::class, 'id', 'account_id');
     }
 
-//    public function transactions()
-//    {
-//        return $this->hasMany(Transaction::class);
-//    }
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class, 'source_card_id', 'id');
+    }
 }

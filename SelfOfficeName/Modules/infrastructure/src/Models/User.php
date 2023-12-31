@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+use Selfofficename\Modules\Domain\Account\Models\Account;
 
 class User extends Authenticatable
 {
@@ -53,4 +54,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function accounts()
+    {
+        return $this->hasMany(Account::class,'user_id', 'id');
+
+    }
 }

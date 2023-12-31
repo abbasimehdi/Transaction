@@ -9,6 +9,7 @@ class BaseConstants
     const LIMIT = 10;
 
     const STR_RANDOM = 10;
+    const KAVENEGAR_SMS_PROVIDER = 'kavenegar';
 
     const TOKEN = 'token';
 

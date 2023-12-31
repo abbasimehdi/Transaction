@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Selfofficename\Modules\Domain\Card\Models\Card;
+use Selfofficename\Modules\Domain\Commission\Models\Commission;
 use Selfofficename\Modules\Domain\Transaction\database\factories\TransactionFactory;
 
 class Transaction extends Model
@@ -21,11 +22,11 @@ class Transaction extends Model
 
     public function card()
     {
-        return $this->belongsTo(Card::class);
+        return $this->belongsTo(Card::class, 'id', 'source_card_id');
     }
 
-//    public function commission()
-//    {
-//        return $this->hasOne(Commission::class);
-//    }
+    public function commission()
+    {
+        return $this->hasOne(Commission::class);
+    }
 }

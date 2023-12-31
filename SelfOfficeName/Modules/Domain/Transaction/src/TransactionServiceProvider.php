@@ -4,7 +4,9 @@ namespace Selfofficename\Modules\Domain\Transaction;
 
 use Carbon\Laravel\ServiceProvider;
 use Illuminate\Support\Facades\Route;
+use Selfofficename\Modules\Domain\Transaction\Contracts\TransactionInterface;
 use Selfofficename\Modules\Domain\Transaction\Models\Schemas\Constants\TransactionConstants;
+use Selfofficename\Modules\Domain\Transaction\Services\TransactionService;
 
 class TransactionServiceProvider extends ServiceProvider
 {
@@ -15,6 +17,7 @@ class TransactionServiceProvider extends ServiceProvider
     {
         $this->routeRegister();
         $this->loadMigrationsFrom(__DIR__.TransactionConstants::MIGRATION_ROUTE);
+        $this->app->bind(TransactionInterface::class, TransactionService::class);
     }
 
     /**
