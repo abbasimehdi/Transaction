@@ -66,6 +66,5 @@ class Kernel extends HttpKernel
         'signed' => \Selfofficename\Modules\InfraStructure\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'convertNumberToEnglish' => ConvertNumberToEnglish::class
     ];
 }

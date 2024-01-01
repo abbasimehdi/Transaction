@@ -13,7 +13,7 @@ interface BaseRepositoryInterface
 
     public function getBy($col, $value, int $limit = 15): JsonResponse;
 
-    public function create(array $data): JsonResponse;
+    public function create(array $data);
 
     public function find(int $id): JsonResponse;
 

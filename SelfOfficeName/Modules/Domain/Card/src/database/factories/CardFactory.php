@@ -22,10 +22,11 @@ class CardFactory extends Factory
      */
     public function definition(): array
     {
+        $card = config('cards.items');
         return [
             'name' => 'name',
             'account_id' => Account::query()->inRandomOrder()->first()->id,
-            'number' => fake()->numerify('################'),
+            'number' => $card[array_rand($card)],
             'expire_date' => fake()->dateTimeBetween( '+2 month',  '+3 years', $timezone = null),
             'cvv2' => fake()->unique()->numberBetween(1000, 9999),
             'amount' => fake()->numberBetween(1000, 100000000),
