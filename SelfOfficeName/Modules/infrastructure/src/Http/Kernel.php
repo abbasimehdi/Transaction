@@ -3,6 +3,7 @@
 namespace Selfofficename\Modules\InfraStructure\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Selfofficename\Modules\Core\Http\Middleware\ConvertNumberToEnglish;
 
 class Kernel extends HttpKernel
 {
@@ -65,5 +66,6 @@ class Kernel extends HttpKernel
         'signed' => \Selfofficename\Modules\InfraStructure\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'convertNumberToEnglish' => ConvertNumberToEnglish::class
     ];
 }
