@@ -3,12 +3,15 @@
 namespace Selfofficename\Modules\Domain\Transaction\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Selfofficename\Modules\Domain\Transaction\Rules\CardNumberValidation;
 use Selfofficename\Modules\Domain\Transaction\Rules\CheckCardbalance;
 use Selfofficename\Modules\Domain\Transaction\Rules\CheckMaxTransactionAmount;
 use Selfofficename\Modules\Domain\Transaction\Rules\CheckMinTransactionAmount;
 
 class TransactionRequest extends FormRequest
 {
+    protected $stopOnFirstFailure = true;
+
     /**
      * Determine if the user is authorized to make this request.
      */
@@ -24,18 +27,29 @@ class TransactionRequest extends FormRequest
     public function rules(): array
     {
         return [
+            "source_card_number"        => [
+                'bail',
+                'required',
+                "exists:cards,number",
+                "min:16",
+                "max:16",
+                new CardNumberValidation(),
+                new CheckCardbalance()
+            ],
             "amount"                    => [
+                'bail',
                 'required',
                 new CheckMinTransactionAmount(),
                 new CheckMaxTransactionAmount(),
                 new CheckCardbalance()
             ],
-            "source_card_number"        => [
+            "destination_card_number"   => [
+                'bail',
                 'required',
-                "exists:cards,number",
-                new CheckCardbalance()
+                "min:16",
+                "max:16",
+                new CardNumberValidation(),
             ],
-            "destination_card_number"   => "required|min:16|max:16",
             "cvv2"                      => "required|min:3|max:5",
             "expired_date"              => "required",
         ];

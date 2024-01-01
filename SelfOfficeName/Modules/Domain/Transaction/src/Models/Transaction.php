@@ -22,7 +22,7 @@ class Transaction extends Model
 
     public function card()
     {
-        return $this->belongsTo(Card::class, 'id', 'source_card_id');
+        return $this->belongsTo(Card::class, 'source_card_id', 'id');
     }
 
     public function commission()

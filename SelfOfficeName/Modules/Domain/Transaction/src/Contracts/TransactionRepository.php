@@ -7,10 +7,8 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
-use mysql_xdevapi\Collection;
 use Selfofficename\Modules\Core\Http\Contracts\BaseRepository;
 use Selfofficename\Modules\Core\Traits\ConvertNumberToEnglish;
-use Selfofficename\Modules\Domain\Account\Models\Account;
 use Selfofficename\Modules\Domain\Card\Models\Card;
 use Selfofficename\Modules\Domain\Commission\Models\Commission;
 use Selfofficename\Modules\Domain\Transaction\Models\Transaction;
@@ -24,7 +22,7 @@ class TransactionRepository extends BaseRepository
 
     protected $data;
     protected $amount = 0;
-
+    protected array $result = [];
     /**
      * @return mixed
      */
@@ -61,7 +59,7 @@ class TransactionRepository extends BaseRepository
             DB::commit();
             // all good
         } catch (\Exception $e) {
-            return DB::rollback();
+            return response()->json(['error' => DB::rollback()], 500);
         }
 
         // Send sms wu=ith strategy pattern;
@@ -78,7 +76,7 @@ class TransactionRepository extends BaseRepository
 
     public function mostTransaction(): JsonResponse
     {
-        $user = User::query()
+        $users = User::query()
             ->join('accounts', 'users.id', 'accounts.user_id')
             ->join('cards', 'accounts.id', 'cards.account_id')
             ->join('transactions', 'cards.id', 'transactions.source_card_id')
@@ -88,8 +86,42 @@ class TransactionRepository extends BaseRepository
             ->orderBy('count', 'desc')
             ->limit(3)
             ->get();
+
+
+
+        $users = $users->map(function ($user) {
+
+
+
+            $user->transactions =  Transaction::query()->whereHas('card.account' , function ($query) use($user)
+            {
+                return $query->where('user_id', $user->id);
+            }
+            )->latest()->take(10)->get();
+
+
+            return  $user;
+
+        });
+
+
+
+
+
+
+//            $user->transactions =  Transaction::query()->with(['card.account' => function ($query) use($user)
+//            {
+//                return $query->where('user_id', $user->id);
+//            }
+//            ])->latest()->take(10)->get();
+//
+//
+//            return  $user;
+//
+//        });
+
         return response()->json(['result' =>
-            $user->with('accounts')
+           $users
         ]);
     }
 }

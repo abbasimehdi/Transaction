@@ -15,6 +15,7 @@ class CheckMaxTransactionAmount implements Rule
      */
     public function passes($attribute, $value): bool
     {
+
         if (
             $value > config('transaction.settings.max')
         ) {
@@ -29,6 +30,6 @@ class CheckMaxTransactionAmount implements Rule
      */
     public function message(): Application|array|string|Translator|null
     {
-        return __('The max amount is '. config('transaction.settings.max'). ' rial');
+        return __('The max transfer amount for transactions is '. config('transaction.settings.max'). ' rial');
     }
 }

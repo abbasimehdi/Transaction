@@ -30,7 +30,7 @@ class Account extends Model
 
     public function cards()
     {
-        return $this->hasMany(Card::class,  'account_id', 'id');
+        return $this->hasMany(Card::class,  'id', 'account_id');
     }
 
 }
