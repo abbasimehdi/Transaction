@@ -52,9 +52,9 @@ abstract class BaseRepository implements BaseRepositoryInterface
     /**
      * @param  array  $data
      */
-    public function create(array $data): JsonResponse
+    public function create(array $data)
     {
-        return response()->json($this->model->create($data));
+        return $this->model->create($data);
     }
 
     /**

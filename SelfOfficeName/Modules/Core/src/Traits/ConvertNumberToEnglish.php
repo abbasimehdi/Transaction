@@ -46,6 +46,7 @@ trait ConvertNumberToEnglish
         $string =  str_replace($arabicDecimal, $newNumbers, $string);
         $string =  str_replace($arabic, $newNumbers, $string);
 
+
         return str_replace($persian, $newNumbers, $string);
     }
 }

@@ -24,11 +24,11 @@ class TransactionFactory extends Factory
     public function definition(): array
     {
         $source = Card::query()->inRandomOrder()->first();
-
+        $card = config('cards.items');
 
         return [
             'source_card_id' => $source,
-            'destination_card_number' => Card::query()->whereNot('id', $source)->inRandomOrder()->first()->id,
+            'destination_card_number' => $card[array_rand($card)],
             'amount' => fake()->numberBetween(10000, 100000),
             'status' => fake()->numberBetween(1, 4),
         ];

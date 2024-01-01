@@ -2,13 +2,12 @@
 
 namespace Selfofficename\Modules\Domain\Transaction\Contracts;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
+use Selfofficename\Modules\Core\Exceptions\Customexception;
 use Selfofficename\Modules\Core\Http\Contracts\BaseRepository;
-use Selfofficename\Modules\Core\Traits\ConvertNumberToEnglish;
 use Selfofficename\Modules\Domain\Card\Models\Card;
 use Selfofficename\Modules\Domain\Commission\Models\Commission;
 use Selfofficename\Modules\Domain\Transaction\Models\Transaction;
@@ -18,10 +17,7 @@ use Selfofficename\Modules\InfraStructure\Models\User;
 
 class TransactionRepository extends BaseRepository
 {
-    use ConvertNumberToEnglish;
-
     protected $data;
-    protected $amount = 0;
     protected array $result = [];
     /**
      * @return mixed
@@ -37,10 +33,9 @@ class TransactionRepository extends BaseRepository
      * @param array $data
      * @return JsonResponse
      */
-    public function transaction(array $data): JsonResponse
+    public function transaction(array $data)
     {
         try {
-            $this->data = $this->convert2english($data);
             $this->data['source_card_id'] = $this->getCardNumberdetail()->id;
             $this->data['amount'] = $this->data['amount'] + config('transaction.settings.commission');
 
@@ -48,7 +43,7 @@ class TransactionRepository extends BaseRepository
 
             // Insert commission
             Commission::query()->create([
-                "transaction_id" => $transaction->id,
+                "transaction_id" => $transaction['id'],
                 'amount' => config('transaction.settings.commission')
             ]);
 
@@ -59,7 +54,9 @@ class TransactionRepository extends BaseRepository
             DB::commit();
             // all good
         } catch (\Exception $e) {
-            return response()->json(['error' => DB::rollback()], 500);
+            DB::rollback();
+
+            return (new Customexception())->message($e);
         }
 
         // Send sms wu=ith strategy pattern;
@@ -74,6 +71,9 @@ class TransactionRepository extends BaseRepository
         return Card::query()->where('number', $this->data['source_card_number'])->first();
     }
 
+    /**
+     * @return JsonResponse
+     */
     public function mostTransaction(): JsonResponse
     {
         $users = User::query()
@@ -87,38 +87,15 @@ class TransactionRepository extends BaseRepository
             ->limit(3)
             ->get();
 
-
-
         $users = $users->map(function ($user) {
-
-
-
             $user->transactions =  Transaction::query()->whereHas('card.account' , function ($query) use($user)
             {
                 return $query->where('user_id', $user->id);
             }
             )->latest()->take(10)->get();
 
-
             return  $user;
-
         });
-
-
-
-
-
-
-//            $user->transactions =  Transaction::query()->with(['card.account' => function ($query) use($user)
-//            {
-//                return $query->where('user_id', $user->id);
-//            }
-//            ])->latest()->take(10)->get();
-//
-//
-//            return  $user;
-//
-//        });
 
         return response()->json(['result' =>
            $users
