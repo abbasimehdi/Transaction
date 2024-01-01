@@ -13,7 +13,7 @@ use Selfofficename\Modules\Domain\Commission\Models\Commission;
 use Selfofficename\Modules\Domain\Transaction\Models\Transaction;
 use Selfofficename\Modules\Domain\Transaction\Patterns\SmsStrategy;
 use Selfofficename\Modules\InfraStructure\Models\User;
-
+use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 class TransactionRepository extends BaseRepository
 {
@@ -36,6 +36,7 @@ class TransactionRepository extends BaseRepository
     public function transaction(array $data)
     {
         try {
+            $this->data = $data;
             $this->data['source_card_id'] = $this->getCardNumberdetail()->id;
             $this->data['amount'] = $this->data['amount'] + config('transaction.settings.commission');
 
@@ -60,7 +61,7 @@ class TransactionRepository extends BaseRepository
         }
 
         // Send sms wu=ith strategy pattern;
-        return response()->json((new SmsStrategy($this->data))->send(), 200);
+        return response()->json((new SmsStrategy($this->data))->send(), ResponseAlias::HTTP_OK);
     }
 
     /**
