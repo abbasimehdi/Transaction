@@ -2,11 +2,8 @@
 
 namespace Selfofficename\Modules\Core\Http\Contracts;
 
-use http\Env\Request;
 use Illuminate\Http\JsonResponse;
-use Selfofficename\Modules\Core\Http\Resources\BaseListCollection;
 use Selfofficename\Modules\Core\Models\Schemas\Constants\BaseConstants;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 abstract class BaseRepository implements BaseRepositoryInterface
@@ -28,11 +25,7 @@ abstract class BaseRepository implements BaseRepositoryInterface
      */
     public function all(): JsonResponse
     {
-        return (new BaseListCollection(
-            collect($this->model->paginate(\request()->query('limit') ?? BaseConstants::LIMIT), ResponseAlias::HTTP_OK)
-        ))
-            ->response()
-            ->setStatusCode(ResponseAlias::HTTP_OK);
+        return $this->model->orderBy('id', 'desc')->get();
     }
 
     /**
@@ -42,10 +35,7 @@ abstract class BaseRepository implements BaseRepositoryInterface
      */
     public function paginate($request, int $limit = BaseConstants::LIMIT): JsonResponse
     {
-        return (new BaseListCollection(collect($this->model->orderBy('id', 'desc')
-            ->paginate(\request()->query('limit') ?? $limit))))
-            ->response()
-            ->setStatusCode(ResponseAlias::HTTP_OK);
+        return $this->model->orderBy('id', 'desc')->paginate($limit);
     }
 
     /**
@@ -56,18 +46,15 @@ abstract class BaseRepository implements BaseRepositoryInterface
      */
     public function getBy($col, $value, int $limit = BaseConstants::LIMIT): JsonResponse
     {
-        return response()->json($this->model->where($col, $value)->limit($limit)->get(), ResponseAlias::HTTP_OK);
+        return $this->model->where($col, $value)->limit($limit)->get();
     }
 
     /**
      * @param  array  $data
-     * @return JsonResponse
      */
     public function create(array $data): JsonResponse
     {
-        return (new BaseListCollection(collect($this->model->create($data))))
-            ->response()
-            ->setStatusCode(ResponseAlias::HTTP_CREATED);
+        return response()->json($this->model->create($data));
     }
 
     /**
@@ -76,32 +63,19 @@ abstract class BaseRepository implements BaseRepositoryInterface
      */
     public function find(int $id): JsonResponse
     {
-        return (new BaseListCollection(collect($this->model->findOrFail($id))))
-            ->response()
-            ->setStatusCode(ResponseAlias::HTTP_OK);
+        return $this->model->find($id);
     }
 
-    /**
-     * @param  int  $id
-     * @param  array  $data
-     * @return JsonResponse
-     */
     public function update(int $id, array $data): JsonResponse
     {
-        return (new BaseListCollection(collect($this->model->findOrfail($id)->update($data))))
-            ->response()
-            ->setStatusCode(ResponseAlias::HTTP_ACCEPTED);
+        return response()->json($this->model->update($data));
     }
 
-    /**
-     * @param  int  $id
-     * @return JsonResponse
-     */
+
     public function delete(int $id): JsonResponse
     {
-        return (new BaseListCollection(collect($this->model->findOrfail($id)->delete())))
-            ->response()
-            ->setStatusCode(ResponseAlias::HTTP_OK);
+        return $this->model->delete();
+
     }
 
     /**

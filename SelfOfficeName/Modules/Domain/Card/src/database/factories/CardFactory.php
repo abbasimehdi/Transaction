@@ -25,7 +25,7 @@ class CardFactory extends Factory
         return [
             'name' => 'name',
             'account_id' => Account::query()->inRandomOrder()->first()->id,
-            'number' => fake()->unique()->numberBetween(16),
+            'number' => fake()->numerify('################'),
             'expire_date' => fake()->dateTimeBetween( '+2 month',  '+3 years', $timezone = null),
             'cvv2' => fake()->unique()->numberBetween(1000, 9999),
             'amount' => fake()->numberBetween(1000, 100000000),

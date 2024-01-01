@@ -24,6 +24,6 @@ class RegisterController extends Controller
      */
     public function register(RegisterRequest $request)
     {
-        return $this->registerInterface->register(($request->all());
+        return $this->registerInterface->register(($request->all()));
     }
 }
