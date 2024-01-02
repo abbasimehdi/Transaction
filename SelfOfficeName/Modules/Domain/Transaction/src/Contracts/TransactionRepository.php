@@ -40,20 +40,16 @@ class TransactionRepository extends BaseRepository
             $this->data['source_card_id'] = $this->getCardNumberdetail()->id;
             $this->data['amount'] = $this->data['amount'] + config('transaction.settings.commission');
 
+            // Create a transaction
             $transaction = $this->create($this->data);
 
             // Insert commission
-            Commission::query()->create([
-                "transaction_id" => $transaction['id'],
-                'amount' => config('transaction.settings.commission')
-            ]);
+            $this->vreateACommission($transaction);
 
             // Update source card number amount
-            Card::find($this->data['source_card_id'])
-                ->decrement('amount', $transaction['amount']);
+            $this->updatecardBalance();
 
             DB::commit();
-            // all good
         } catch (\Exception $e) {
             DB::rollback();
 
@@ -101,5 +97,26 @@ class TransactionRepository extends BaseRepository
         return response()->json(['result' =>
            $users
         ]);
+    }
+
+    /**
+     * @param $transaction
+     * @return Model|Builder
+     */
+    private function vreateACommission($transaction): Model|Builder
+    {
+        return Commission::query()->create([
+            "transaction_id" => $transaction['id'],
+            'amount' => config('transaction.settings.commission')
+        ]);
+    }
+
+    /**
+     * @return void
+     */
+    private function updatecardBalance($transaction): void
+    {
+        Card::find($this->data['source_card_id'])
+            ->decrement('amount', $transaction['amount']);
     }
 }

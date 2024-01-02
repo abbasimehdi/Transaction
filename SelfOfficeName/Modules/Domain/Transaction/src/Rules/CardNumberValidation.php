@@ -5,7 +5,6 @@ namespace Selfofficename\Modules\Domain\Transaction\Rules;
 use Illuminate\Contracts\Translation\Translator;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Foundation\Application;
-use Selfofficename\Modules\Domain\Card\Models\Card;
 
 class CardNumberValidation implements Rule
 {
