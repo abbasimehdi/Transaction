@@ -47,7 +47,7 @@ class TransactionRepository extends BaseRepository
             $this->vreateACommission($transaction);
 
             // Update source card number amount
-            $this->updatecardBalance();
+            $this->updatecardBalance($transaction);
 
             DB::commit();
         } catch (\Exception $e) {
