@@ -29,11 +29,11 @@ class TransactionRequest extends FormRequest
     protected function prepareForValidation(): void
     {
         $this->merge([
-            'amount' => $this->convert2english($this->request->all()['amount']),
-            'source_card_number' => $this->convert2english($this->request->all()['source_card_number']),
-            'destination_card_number' => $this->convert2english($this->request->all()['destination_card_number']),
-            'expired_date' => $this->convert2english($this->request->all()['expired_date']),
-            'cvv2' => $this->convert2english($this->request->all()['cvv2']),
+            'amount' => $this->convertToEnglish($this->request->all()['amount']),
+            'source_card_number' => $this->convertToEnglish($this->request->all()['source_card_number']),
+            'destination_card_number' => $this->convertToEnglish($this->request->all()['destination_card_number']),
+            'expired_date' => $this->convertToEnglish($this->request->all()['expired_date']),
+            'cvv2' => $this->convertToEnglish($this->request->all()['cvv2']),
         ]);
     }
 
