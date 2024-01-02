@@ -3,12 +3,8 @@
 namespace Selfofficename\Modules\Domain\Transaction\database\factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
-use Selfofficename\Modules\Domain\Account\Models\Account;
 use Selfofficename\Modules\Domain\Card\Models\Card;
 use Selfofficename\Modules\Domain\Transaction\Models\Transaction;
-use Selfofficename\Modules\InfraStructure\Models\User;
 
 /**
  * @extends Factory<\Selfofficename\Modules\Domain\Transaction\Models\Transaction>

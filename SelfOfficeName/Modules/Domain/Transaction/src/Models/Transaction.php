@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Selfofficename\Modules\Domain\Card\Models\Card;
 use Selfofficename\Modules\Domain\Commission\Models\Commission;
 use Selfofficename\Modules\Domain\Transaction\database\factories\TransactionFactory;
+use Selfofficename\Modules\Domain\Transaction\Models\Schemas\Constants\TransactionConstants;
 
 class Transaction extends Model
 {
@@ -30,7 +31,9 @@ class Transaction extends Model
      */
     public function card()
     {
-        return $this->belongsTo(Card::class, 'source_card_id', 'id');
+        return $this->belongsTo(
+            Card::class, TransactionConstants::SOURCE_CARD_ID,
+            TransactionConstants::ID);
     }
 
     /**

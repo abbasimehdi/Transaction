@@ -9,6 +9,9 @@ use Selfofficename\Modules\InfraStructure\Http\Controllers\Controller;
 
 class TransactionController extends Controller
 {
+    /**
+     * @param TransactionInterface $transactionInterface
+     */
     public function __construct(
         TransactionInterface $transactionInterface
     ) {

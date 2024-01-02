@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Selfofficename\Modules\Domain\Transaction\Http\Controllers\TransactionController;
+use Selfofficename\Modules\Domain\Transaction\Models\Schemas\Constants\TransactionConstants;
 
-Route::prefix('v1')->middleware(['auth:api'])->group(function ($router) {
-    $router->Apiresource('transaction', TransactionController::class);
+Route::prefix(TransactionConstants::VERSION)
+    ->middleware(['auth:api'])
+    ->group(function ($router) {
+    $router->Apiresource(TransactionConstants::TRANSACTION, TransactionController::class);
 });
