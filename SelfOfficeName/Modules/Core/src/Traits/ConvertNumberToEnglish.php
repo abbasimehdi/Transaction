@@ -8,7 +8,7 @@ trait ConvertNumberToEnglish
      * @param $string
      * @return array|string|string[]
      */
-    public function convert2english($string): array|string
+    public function convertToEnglish($string): array|string
     {
         $newNumbers = range(0, 9);
         // 1. Persian HTML decimal
