@@ -39,6 +39,7 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
+            "Selfofficename\\Modules\\Domain\\Authentication\\tests\\": "SelfOfficeName/Modules/Domain/Authentication/tests",
             "Selfofficename\\Modules\\Domain\\Transaction\\tests\\": "SelfOfficeName/Modules/Domain/Transaction/tests"
         }
     },
