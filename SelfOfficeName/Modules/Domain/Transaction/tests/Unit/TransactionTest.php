@@ -35,10 +35,12 @@ class TransactionTest extends TestCase
     }
 
 
-    /** @test */
+    /** @test
+     * @doesNotPerformAssertions
+     */
     public function it_has_one_card()
     {
-        $reservation = Transaction::factory()->create([
+        Transaction::factory()->create([
             'source_card_id' => $this->card->id,
         ]);
     }

@@ -12,7 +12,8 @@
 - ubuntu
 
 # Run Project
--  sudo docker-compose up -d
+- cp .env.example .env 
+- sudo docker-compose up -d
 -  sudo docker-compose exec transaction_app php artisan optimize:clear
 -  sudo docker-compose exec transaction_app php artisan migrate --seed
 -  sudo docker-compose exec transaction_app php artisan db:seed

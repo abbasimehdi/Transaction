@@ -36,7 +36,7 @@ class Transaction extends Model
     /**
      * @return HasOne
      */
-    public function commission()
+    private function commission(): HasOne
     {
         return $this->hasOne(Commission::class);
     }
