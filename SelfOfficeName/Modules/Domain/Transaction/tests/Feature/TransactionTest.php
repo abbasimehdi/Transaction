@@ -45,4 +45,21 @@ class TransactionTest extends TestCase
 
         $response->assertStatus(ResponseAlias::HTTP_OK);
     }
+
+    public function a_user_can_be_see_the_most_transaction_list(): void
+    {
+        $response = $this->actingAs($this->user, 'api')
+            ->json('GET', '/api/v1/transaction',
+                [
+                    'headers' =>
+                        [
+                            'Accept' => 'application/json',
+                            'Content-Type' => 'application/json',
+                            'Authorization' => "Bearer $this->token",
+                        ]
+                ]
+            );
+
+        $response->assertStatus(ResponseAlias::HTTP_OK);
+    }
 }
