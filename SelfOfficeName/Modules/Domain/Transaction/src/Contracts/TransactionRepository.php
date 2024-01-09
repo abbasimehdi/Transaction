@@ -44,10 +44,10 @@ class TransactionRepository extends BaseRepository
             $transaction = $this->create($this->data);
 
             // Insert commission
-            $this->vreateACommission($transaction);
+            $this->createACommission($transaction);
 
             // Update source card number amount
-            $this->updatecardBalance($transaction);
+            $this->updateCardBalance($transaction);
 
             DB::commit();
         } catch (\Exception $e) {
@@ -86,9 +86,9 @@ class TransactionRepository extends BaseRepository
 
         $users = $users->map(function ($user) {
             $user->transactions =  Transaction::query()->whereHas('card.account' , function ($query) use($user)
-            {
-                return $query->where('user_id', $user->id);
-            }
+                {
+                    return $query->where('user_id', $user->id);
+                }
             )->latest()->take(10)->get();
 
             return  $user;
@@ -103,7 +103,7 @@ class TransactionRepository extends BaseRepository
      * @param $transaction
      * @return Model|Builder
      */
-    private function vreateACommission($transaction): Model|Builder
+    private function createACommission($transaction): Model|Builder
     {
         return Commission::query()->create([
             "transaction_id" => $transaction['id'],
@@ -114,7 +114,7 @@ class TransactionRepository extends BaseRepository
     /**
      * @return void
      */
-    private function updatecardBalance($transaction): void
+    private function updateCardBalance($transaction): void
     {
         Card::find($this->data['source_card_id'])
             ->decrement('amount', $transaction['amount']);
